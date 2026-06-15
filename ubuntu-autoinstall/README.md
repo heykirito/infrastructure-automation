@@ -10,6 +10,23 @@ I built it to automate the process of installing ubuntu on many systems at once,
 ## How it works
 I made it to just boot and forget it and come back to a complete ubuntu installtion. It has a config which you use to generate your custom ubuntu ISO and boot from it. All information required for installtion are pre-written in the config file itself. The deb packages are also bundled inside the ISO itself. 
 
+
+Here's the file sturcture:
+
+.
+├── extracted-iso
+│   ├── boot
+│   │   └── grub
+│   │       └── grub.cfg
+│   ├── custom-packages
+│   │   ├── exampleA.deb
+│   │   └── exampleB.deb
+│   └── ncloud
+│       ├── meta-data
+│       └── user-data
+├── README.md
+└── TROUBLESHOOT.md
+
 ## Requirements
 - Distro: Any Ubuntu distro from 20.04LTS to 24.04 LTS
 - A flash drive
