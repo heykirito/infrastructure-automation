@@ -1,0 +1,38 @@
+#cloud-config
+autoinstall:
+  version: 1
+  interactive-sessions: []
+  
+  locale: en_US.UTF-8
+
+  timezone: Asia/Kolkata
+
+  identity:
+    hostname: ubuntu-sys
+    realname: 'Flexsin Admin'
+    username: flexadmin
+    password: '$6$1bz1.ZPTtRoVVBIU$sAlwvpoVI6wBrK01T1i.4rXa9k0pNHSogq6.D15P0Sh6MunEJCBONuRNeReVj36vdw2JurgawDijidehRfBxe1'
+
+  storage:
+    layout:
+      name: direct
+  
+  shutdown: reboot
+  
+  late-commands:
+    - curtin in-target -- dpkg --add-architecture i386    
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get dist-upgrade -y
+
+    - mkdir -p /target/tmp/local-pkgs
+    - cp /cdrom/custom-pkgs/*.deb /target/tmp/local-pkgs/
+    - ls /target/tmp/local-pkgs/
+
+    - curtin in-target -- apt-get install -y /tmp/local-pkgs/VNC-Server.deb || true
+    - curtin in-target -- apt-get install -y /tmp/local-pkgs/VNC-Viewer.deb || true
+    
+    - curtin in-target -- dpkg --configure -a || true
+
+    - curtin in-target -- apt-get install -f -y
+
+    - rm -rf /target/tmp/local-pkgs
