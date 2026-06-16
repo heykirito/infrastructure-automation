@@ -13,7 +13,7 @@ I made it to just boot it, forget it and come back to a complete ubuntu installt
 
 Here's the file structure:
 
-.
+```bash
 ├── extracted-iso
 │   ├── boot
 │   │   └── grub
@@ -26,6 +26,7 @@ Here's the file structure:
 │       └── user-data
 ├── README.md
 └── TROUBLESHOOT.md
+```
 
 ## Requirements
 - Distro: Any Ubuntu distro from 20.04 LTS to 24.04 LTS
