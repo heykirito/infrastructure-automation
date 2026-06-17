@@ -12,6 +12,9 @@ You just need to boot ISO and then no human intervention required.
 ### Ansible Playbooks (work in progress)
 Post-install configuration for Ubuntu systems
 
+### Rouge Crond Process
+How a simple crond task turned out to be Cryptominer task eating up server resources. 
+[View docs -> rogue-crond-process](./rogue-crond-process)
 
 ---
 Built by Laksh | Noida, India
