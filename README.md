@@ -12,6 +12,8 @@ Personal infrastructure labs - projects build while leaning DevOps in Linux envi
 
 ---
 
+<h3 style="margin-bottom: 0;">Ubuntu Autoinstall</h3>
+<h4 style="margin-top: 0;">Status: 🚧 In Progress</h4>
 ### Ubuntu Autoinstall 
 #### Status: 🚧 In Progress
 I automated Ubuntu 22.04 LTS deployment using a custom ISO with cloud-init.
