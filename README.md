@@ -12,27 +12,28 @@ Personal infrastructure labs - projects build while leaning DevOps in Linux envi
 
 ---
 
-### Ubuntu Autoinstall config
-#### Status: 🚧 In Progress 
+### Ubuntu Autoinstall <br>
+#### Status: 🚧 In Progress <br>
 I automated Ubuntu 22.04 LTS deployment using a custom ISO with cloud-init.
 You just need to boot ISO and then no human intervention required.
 [View project -> ubuntu-autoinstall](./ubuntu-autoinstall)
 
-### Ansible Playbooks
-#### Status: 📋 Planned
+### Ansible Playbooks <br>
+#### Status: 📋 Planned <br>
 Post-install configuration for freshly provisioned Ubuntu systems
 [View project -> Ansible Playbooks](./ansible-playbooks)
 
 
-### Rogue Crond Process
-#### Status: ✅ Complete
+### Rogue Crond Process <br>
+#### Status: ✅ Complete <br>
 How a simple crond task turned out to be Cryptominer task eating up server resources.
 [View docs -> rogue-crond-process](./rogue-crond-process)
 
 
-### Powershell Automation
+### Powershell Automation <br>
+#### Status: 🚧 In Progress <br>
 PS scripts to automate the boring tasks like creating new user, installing apps, and profile configuration in windows env. 
-#### Status: 🚧 In Progress
+
 [View project -> Powershell Scripts](./powershell-scripts)
 
 
