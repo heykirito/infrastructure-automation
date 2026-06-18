@@ -5,10 +5,10 @@ Personal infrastructure labs - projects build while leaning DevOps in Linux envi
 
 | Project | Description | Status |
 |---|---|---|
-| [Ubuntu Autoinstall](#ubuntu-autoinstall) | Fully automated Ubuntu 22.04 ISO deployment via cloud-init | ✅ Complete |
-| [Ansible Playbooks](#ansible-playbooks) | Post-install configuration management for Ubuntu systems | 🚧 In Progress |
+| [Ubuntu Autoinstall](#ubuntu-autoinstall) | Fully automated Ubuntu 22.04 ISO deployment via cloud-init | 🚧 In Progress |
+| [Ansible Playbooks](#ansible-playbooks) | Post-install configuration management for Ubuntu systems | 📋 Planned |
 | [Rogue Crond Process](#rogue-crond-process) | Incident investigation: crond task masking a cryptominer | ✅ Complete |
-| [PowerShell Automation](#powershell-automation) | Scripts for new user provisioning in a business environment | ✅ Complete |
+| [PowerShell Automation](#powershell-automation) | Scripts for new user provisioning in a business environment | 🚧 In Progress |
 
 ---
 
@@ -21,6 +21,8 @@ You just need to boot ISO and then no human intervention required.
 ### Ansible Playbooks
 #### Status: 📋 Planned
 Post-install configuration for freshly provisioned Ubuntu systems
+[View project -> Ansible Playbooks](./ansible-playbooks)
+
 
 ### Rogue Crond Process
 #### Status: ✅ Complete
@@ -28,9 +30,9 @@ How a simple crond task turned out to be Cryptominer task eating up server resou
 [View docs -> rogue-crond-process](./rogue-crond-process)
 
 
-### Powershell Automation Scripts
+### Powershell Automation
 PS scripts to automate the boring tasks like creating new user, installing apps, and profile configuration in windows env. 
-#### Status: 📋 Planned
+#### Status: 🚧 In Progress
 [View project -> Powershell Scripts](./powershell-scripts)
 
 
