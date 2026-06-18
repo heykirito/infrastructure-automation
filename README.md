@@ -1,20 +1,39 @@
 # DevOps Projects
-Personal infrastructure projects build while leaning DevOps
+Personal infrastructure labs - projects build while leaning DevOps in Linux enviroments. Automated provisioning, configuration management and automation.
 
 ## Projects
 
-### Ubuntu Autoinstall config
+| Project | Description | Status |
+|---|---|---|
+| [Ubuntu Autoinstall](#ubuntu-autoinstall) | Fully automated Ubuntu 22.04 ISO deployment via cloud-init | ✅ Complete |
+| [Ansible Playbooks](#ansible-playbooks) | Post-install configuration management for Ubuntu systems | 🚧 In Progress |
+| [Rogue Crond Process](#rogue-crond-process) | Incident investigation: crond task masking a cryptominer | ✅ Complete |
+| [PowerShell Automation](#powershell-automation) | Scripts for new user provisioning in a business environment | ✅ Complete |
 
+---
+
+### Ubuntu Autoinstall config
+#### Status: 🚧 In Progress 
 I automated Ubuntu 22.04 LTS deployment using a custom ISO with cloud-init.
 You just need to boot ISO and then no human intervention required.
 [View project -> ubuntu-autoinstall](./ubuntu-autoinstall)
 
-### Ansible Playbooks (work in progress)
-Post-install configuration for Ubuntu systems
+### Ansible Playbooks
+#### Status: 📋 Planned
+Post-install configuration for freshly provisioned Ubuntu systems
 
-### Rouge Crond Process
-How a simple crond task turned out to be Cryptominer task eating up server resources. 
+### Rogue Crond Process
+#### Status: ✅ Complete
+How a simple crond task turned out to be Cryptominer task eating up server resources.
 [View docs -> rogue-crond-process](./rogue-crond-process)
+
+
+### Powershell Automation Scripts
+PS scripts to automate the boring tasks like creating new user, installing apps, and profile configuration in windows env. 
+#### Status: 📋 Planned
+[View project -> Powershell Scripts](./powershell-scripts)
+
+
 
 ---
 Built by Laksh | Noida, India
