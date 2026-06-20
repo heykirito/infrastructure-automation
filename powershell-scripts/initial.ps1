@@ -7,7 +7,7 @@ Write-Host "New Account created" -ForegroundColor Green
 Set-LocalUser -Name $NewUser -PasswordNeverExpires $true
 Write-Host "Set password to never expire" -ForegroundColor Green
 
-net $NewUser xyz /passwordchg:no
+net user $NewUser /passwordchg:no
 Write-Host "Password change disabled" -ForegroundColor Green
 
 Add-LocalGroupMember -Group "Administrators" -Member $NewUser
