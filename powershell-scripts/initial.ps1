@@ -1,5 +1,7 @@
+$Newuser = Read-Host -Prompt "Please enter the username: "
+
 $Password = ConvertTo-SecureString "123456" -AsPlainText -Force
-$NewUser = "test"
+Write-Host "Using default password" -ForegroundColor Green
 
 New-LocalUser -Name $NewUser -Password $Password -Description "NewAdminAccount"
 Write-Host "New Account created" -ForegroundColor Green 
