@@ -31,7 +31,11 @@ Write-Host "Password change disabled" -ForegroundColor Green
 Add-LocalGroupMember -Group "Administrators" -Member $NewUser
 Write-Host "Added to admin group" -ForegroundColor Green
 
-Disable-LocalUser -Name "OldUserAccount"
-Write-Host "Disbled current account" -ForegroundColor Green
+$PromptResponse = Read-Host -Prompt "Do you want to disable current user? (Y/n): "
+if ($PromptResponse -eq 'Y','y','yes') {
+  $CurrentUser = $env:username
+  Disable-LocalUser -Name $CurrentUser
+  Write-Host "Disbled current account" -ForegroundColor Green
+}
 
-Write-Host "Script 1 complete. Please logout and login into user $NewUser to run final script." -ForegroundColor Green
+Write-Host "Script 1 complete. Please logout and login into user '$NewUser' to run final script." -ForegroundColor Green
