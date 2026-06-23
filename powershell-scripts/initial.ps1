@@ -1,4 +1,20 @@
+$isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+if ($isAdmin) {
+    Write-Host "Running with admin privileges." -ForegroundColor Red 
+} else {
+    Write-Warning "Run with admin privileges, exiting."
+    Exit
+}
+
 $Newuser = Read-Host -Prompt "Please enter the username: "
+
+while (Get-LocalUser -Name $NewUser -ErrorAction SilentlyContinue) {
+    Write-Host ""
+    Write-Host "The username already exists"
+
+    $NewUser = Read-Host -Prompt "Enter a different username"
+  }
 
 $Password = ConvertTo-SecureString "123456" -AsPlainText -Force
 Write-Host "Using default password" -ForegroundColor Green
