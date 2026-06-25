@@ -17,3 +17,29 @@ if [[ $EUID -ne 0 ]]; then
   error "This script must be run as root (use sudo). "
   exit 1
 fi
+
+echo -e "\n${CYAN}========================================${NC}"
+echo -e "${CYAN}   Ubuntu Admin User Creation Script   ${NC}"
+echo -e "${CYAN}========================================${NC}\n"
+
+white true; do
+  read -rp "Enter new username: " USERNAME
+  USERNAME = "${USERNAME// /}"
+
+if [[ -z "$USERNAME" ]]; then
+  error "Username can't be empty"
+  continue
+fi 
+
+
+if id "$USERNAME"  &>/dev/null; then
+  error "Username already exists, please choose a differnet name: "
+  continue
+fi 
+
+if [[ ! "$USERNAME" =~ ^[a-z_][a-z0-9_-]{0,31}$ ]];then
+  error "Username can start with lowercase and only contain small letter, numbers, '_', '-'."
+  continue
+fi 
+
+
