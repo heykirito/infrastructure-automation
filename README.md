@@ -41,7 +41,11 @@ Status: 🚧 In Progress
 PS scripts to automate the boring tasks like creating new user, installing apps, and profile configuration in windows env. 
 [View project -> Powershell Scripts](./powershell-scripts)
 
+### New User Script 
+Status: 🚧 In Progress 
 
+Script to create new user in linux. 
+[View projec -> Linux New User Script](./new-user-linux-script)
 
 ---
 Built by Laksh | Noida, India
