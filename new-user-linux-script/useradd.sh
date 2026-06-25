@@ -22,24 +22,28 @@ echo -e "\n${CYAN}========================================${NC}"
 echo -e "${CYAN}   Ubuntu Admin User Creation Script   ${NC}"
 echo -e "${CYAN}========================================${NC}\n"
 
-white true; do
-  read -rp "Enter new username: " USERNAME
-  USERNAME = "${USERNAME// /}"
+#check for empty string
+#check for existing username
+#check for regex
 
-if [[ -z "$USERNAME" ]]; then
-  error "Username can't be empty"
-  continue
-fi 
+while true; do
+  read -rp "Enter username: " USERNAME
+  USERNAME="${USERNAME// /}"
 
+  if [[ -z $USERNAME ]]; then
+    error "Username cant be empty"
+    continue
+  fi
 
-if id "$USERNAME"  &>/dev/null; then
-  error "Username already exists, please choose a differnet name: "
-  continue
-fi 
+  if id $USERNAME &>/dev/null; then
+    error "'$USERNAME' already exists, enter a different name: "
+    continue
+  fi
 
-if [[ ! "$USERNAME" =~ ^[a-z_][a-z0-9_-]{0,31}$ ]];then
-  error "Username can start with lowercase and only contain small letter, numbers, '_', '-'."
-  continue
-fi 
+  if [[ ! $USERNAME =~ ^[a-z_][a-z0-9_-]{0,31}$ ]]; then
+    error "Username can only start with lowercase or underscore and only contain lowercase, digits, _, -: "
+    continue
+  fi
 
-
+  break
+done
