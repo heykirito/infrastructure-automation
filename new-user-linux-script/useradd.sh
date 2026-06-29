@@ -47,3 +47,23 @@ while true; do
 
   break
 done
+
+while true; do
+  read -rp "Enter password: " PASSWORD
+  echo
+
+  if [[ -z $PASSWORD ]]; then
+    error "Password can't be empty"
+    echo
+  fi
+
+  read -rsp "Reenter password: " PASSWORD_CONFIRM
+  echo
+
+  if [[ $PASSWORD != $PASSWORD_CONFIRM ]]; then
+    error "password do not match, try again."
+    continue
+  fi
+
+  break
+done
