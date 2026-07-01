@@ -69,4 +69,13 @@ while true; do
 done
 
 read -rp "Enter full name: " FULLNAME
+
 info "Creating user '$USERNAME'..."
+
+if [[ -n "$FULLNAME" ]]; then
+    useradd -m -s /bin/bash -c "$FULLNAME" "$USERNAME"
+else
+    useradd -m -s /bin/bash -c "$USERNAME"
+fi
+
+success "User created"
