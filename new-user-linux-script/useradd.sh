@@ -67,3 +67,6 @@ while true; do
 
   break
 done
+
+read -rp "Enter full name: " FULLNAME
+info "Creating user '$USERNAME'..."
