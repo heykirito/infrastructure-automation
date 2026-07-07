@@ -14,4 +14,6 @@ I went ahead with two file script instead of a single file because currently win
 ## Requirements:
 - Windows 10 or 11
 - A usb to keep the scripts
-- A windows installation with at least one account already configured to launch the script from. 
+- A windows installation with at least one account already configured to launch the script from.
+
+## Working
