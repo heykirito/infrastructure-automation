@@ -73,9 +73,13 @@ read -rp "Enter full name: " FULLNAME
 info "Creating user '$USERNAME'..."
 
 if [[ -n "$FULLNAME" ]]; then
-    useradd -m -s /bin/bash -c "$FULLNAME" "$USERNAME"
+  useradd -m -s /bin/bash -c "$FULLNAME" "$USERNAME"
 else
-    useradd -m -s /bin/bash -c "$USERNAME"
+  useradd -m -s /bin/bash -c "$USERNAME"
 fi
 
 success "User created"
+
+info "Adding '$USERNAME' to the sudo group..."
+usermod -aG sudo "$USERNAME"
+success "'$USERNAME' added to the sudo group."
