@@ -47,3 +47,39 @@ while true; do
 
   break
 done
+
+while true; do
+  read -rp "Enter password: " PASSWORD
+  echo
+
+  if [[ -z $PASSWORD ]]; then
+    error "Password can't be empty"
+    echo
+  fi
+
+  read -rsp "Reenter password: " PASSWORD_CONFIRM
+  echo
+
+  if [[ $PASSWORD != $PASSWORD_CONFIRM ]]; then
+    error "password do not match, try again."
+    continue
+  fi
+
+  break
+done
+
+read -rp "Enter full name: " FULLNAME
+
+info "Creating user '$USERNAME'..."
+
+if [[ -n "$FULLNAME" ]]; then
+  useradd -m -s /bin/bash -c "$FULLNAME" "$USERNAME"
+else
+  useradd -m -s /bin/bash -c "$USERNAME"
+fi
+
+success "User created"
+
+info "Adding '$USERNAME' to the sudo group..."
+usermod -aG sudo "$USERNAME"
+success "'$USERNAME' added to the sudo group."
